@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meme Generator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <style>
+        .meme{
+            word-wrap: break-word; 
+            position: relative;
+            text-align: center;
+            width: 500px;
+            height: 500px;
+        }
+
+        .top, .bottom{
+            max-width: 500px;
+            position: absolute;
+            transform: translate(-50%, 0%);
+            left: 50%;
+            font-family: impact;
+            font-size: 2.5em;
+            text-transform: uppercase;
+            color: white;
+            letter-spacing: 1px;
+            text-shadow:2px 2px 0 #000,
+            -2px -2px 0 #000,
+            2px -2px 0 #000,
+            -2px 2px 0 #000,
+            0px 2px 0 #000,
+            2px 0px 0 #000,
+            0px -2px 0 #000,
+            -2px 0px 0 #000,
+            2px 2px 5px #000;
+        }
+
+        .top{
+            top: 5%;
+        }
+
+        .bottom{
+            bottom: 5%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+          <h1 class="col-12 m-3">Meme Generator</h1>
+        </div>
+        <div class="row">
+                <div class="col-12 m-3">Welcome to the Meme Generator! Please enter your meme's text below, and 
+                    a link to the image you'd like to use. If you have a rectangular image, note that the Generator
+                    will resize it into a square. Have fun!                
+                </div>
+        </div>
+        <div class="row">
+            <div id="memeList">
+            </div>
+        </div>
+        <div class="row">
+          <form action="#" id="memeForm" class="col-12 p-3">
+                <input type="text" class="form-control m-3" id="ttxt" placeholder="Enter your meme's top text" maxlength="30">
+                <input type="text" class="form-control m-3" id="btxt" placeholder="Enter your meme's bottom text" maxlength="30">
+                <input type="text" class="form-control m-3" name="url" id="url" placeholder="Copy your image link here">
+            <input type="submit" class="btn btn-primary m-3" value="Make my meme">
+          </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
